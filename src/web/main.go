@@ -12,14 +12,12 @@ func main() {
 	r.Use(gin.Logger())
 	r.Use(gin.Recovery())
 
-	r.Static("/css", "./static/css")
-	r.Static("/img", "./static/img")
-	r.Static("/scss", "./static/scss")
-	r.Static("/vendor", "./static/vendor")
-	r.Static("/js", "./static/js")
-	r.StaticFile("/favicon.ico", "./img/favicon.ico")
+	r.Static("/css", "./assets/css")
+	r.Static("/img", "./assets/img")
+	r.Static("/vendor", "./assets/vendor")
+	r.Static("/js", "./assets/js")
 
-	r.LoadHTMLGlob("templates/**/*")
+	r.LoadHTMLGlob("./htmls/*")
 	controller.Router(r)
 
 	log.Println("Server started")

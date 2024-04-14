@@ -8,14 +8,14 @@ import (
 
 func Router(r *gin.Engine) {
 	r.GET("/", index)
-	r.GET("/contact", contact)
-	r.GET("/about", about)
+	// r.GET("/contact", contact)
+	// r.GET("/about", about)
 }
 
 func index(c *gin.Context) {
 	c.HTML(
 		http.StatusOK,
-		"views/index.html",
+		"index.html",
 		gin.H{
 			"title": "CCat's website",
 		},
