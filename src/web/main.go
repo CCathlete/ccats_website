@@ -12,12 +12,12 @@ func main() {
 	r.Use(gin.Logger())
 	r.Use(gin.Recovery())
 
-	r.Static("/css", "./static/css")
-	r.Static("/img", "./static/img")
-	r.Static("/scss", "./static/scss")
-	r.Static("/vendor", "./static/vendor")
-	r.Static("/js", "./static/js")
-	r.StaticFile("/favicon.ico", "./img/favicon.ico")
+	r.Static("/static/css", "./static/css")
+	r.Static("/static/img", "./static/img")
+	r.Static("/static/scss", "./static/scss")
+	r.Static("/static/vendor", "./static/vendor")
+	r.Static("/static/js", "./static/js")
+	r.StaticFile("/img/favicon.ico", "./img/favicon.ico")
 
 	r.LoadHTMLGlob("templates/**/*")
 	controller.Router(r)
