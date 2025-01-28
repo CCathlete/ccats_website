@@ -281,6 +281,11 @@ h6 {
   color: #fff;
   padding-bottom: 4px;
   letter-spacing: 1px;
+  text-shadow: 
+  -2px -2px 0 #000,  
+   2px -2px 0 #000,
+  -2px  2px 0 #000,
+   2px  2px 0 #000; /* Thicker black border */
   {{/* border-bottom: 3px solidrgba(20, 157, 221, 0); */}}
 }
 
