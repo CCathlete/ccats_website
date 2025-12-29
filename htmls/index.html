@@ -74,13 +74,15 @@
     <div class="hero-container" data-aos="fade-in">
       <h1>Chen(Ken) Cat</h1>
       <p>
-        <span class="typed" data-typed-items="A <span style='color:gold; font-weight:bold;'>multidisciplinary</span> engineer
-with a passion for open source projects."></span>
+        <span class="typed" data-typed-items="A <span style='color:gold; font-weight:bold;'>CREATIVITY</span>"></span>
       </p>
       <p>
-        <span class="typed" data-typed-items="An <span style='color:gold; font-weight:bold;'>experienced proffessional</span> 
-with a track record of more than 14 years 
-of delivering creative software solutions."></span>
+        <span class="typed"
+          data-typed-items="A <span style='color:gold; font-weight:bold;'>cross domain concept bridging</span>: I bring clarity where there is complexity."></span>
+      </p>
+      <p>
+        <span class="typed" data-typed-items="An <span style='color:gold; font-weight:bold;'>technical polyglot</span> 
+with more than 14 years of accelerating innovation and alignment in high-impact engineering environments."></span>
       </p>
       <p>
         <span class="typed" data-typed-items="Strong sense of <span style='color:gold; font-weight:bold;'>feature ownership
@@ -120,18 +122,18 @@ through empathy and teamwork."></span>
             <img src="../assets/img/profile-img.jpg" class="img-fluid" alt="">
           </div>
           <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-            <h3>Software Developer.</h3>
+            <h3>Software Engineer.</h3>
             <p class="fst-italic">
-              Experience with Java, Go, Typescript/NodeJS (Back-end), React (front-end), Python (automation), SQL,
-              NoSQL, Kubernetes,
-              CI/CD, Terraform, Ansible, Vagrant.
+              Experience with Python, Typescript/NodeJS (Back-end), React (front-end), and SQL. Knows my way around Go,
+              Java, Scala, C, MongoDB, Kubernetes, Terraform, Ansible, Vagrant
+              and various CI/CD tools.
             </p>
             <div class="row">
               <div class="col-lg-6">
                 <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>37</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>38</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>21 January 1988</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Kosice, Slovakia</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Košice, Slovakia</span></li>
                 </ul>
               </div>
               <div class="col-lg-6">
@@ -145,8 +147,9 @@ through empathy and teamwork."></span>
               </div>
             </div>
             <p>
-              In my spare time I play with Linux systems and back end development. I have a passion for open source
-              contribution, especially open infrastructure such as OpenStack cloud technology.
+              In my spare time I play with Linux systems and data platforms.
+              I have a passion for open source tools, especially the Apache
+              ecosystem (HDFS, Spark, Airflow, Superset etc.).
             </p>
           </div>
         </div>
@@ -210,13 +213,9 @@ through empathy and teamwork."></span>
         <div class="section-title">
           <h2>Resume</h2>
           <p>
-            A convention breaking, highly adaptable software engineer with 14+ years of experience
-            with designing and building scalable and robust automation frameworks, infrastructure,
-            and CI/CD pipelines. Deep knowledge of Python mechanisms. Skilled with Bash, Docker,
-            Kubernetes and cloud deployment. Guaranteed military grade engineering experience,
-            including technical leadership based on mentoring, empathy and support. Passionate
-            about smart automation using genetic algorithms, data streaming and domain driven
-            design (DDD). Believes in delivery that is beyond WOW.
+            A convention breaking, highly adaptable software engineer with 14+ years of turning complexity into clarity
+            and bringing order to where there was none. I specialise in making very complex issues understandable and
+            approachable, connecting all stakeholders, working together as a team to deliver the next creative solution.
           </p>
         </div>
         <!---->
@@ -227,11 +226,10 @@ through empathy and teamwork."></span>
             <div class="resume-item pb-0">
               <h4>Chen(Ken) Cat</h4>
               <p><em>
-                  Specializing in Spring Boot (Java), gRPC (Go), Selenium, web/data scrapers (Python) and microservices
-                  architecture.
-                  Skilled in designing RESTful APIs, optimizing database performance, and automating workflows.
-                  Completed CKAD certification preparation course and deployed personal projects on
-                  Heroku.
+                  All throughout my career I adapted quickly to new complex topics, contributed to the technical
+                  implementation, built tools, libraries and automations to help my colleagues and served as the
+                  'conceptual bridge' that made the implementation something that everybody can understand and have a
+                  common language about.
                 </em></p>
               <ul>
                 <li>Kosice, Slovakia</li>
@@ -270,34 +268,53 @@ through empathy and teamwork."></span>
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <h3 class="resume-title">Professional Experience</h3>
             <div class="resume-item">
-              <h4>Tutor & Freelance developer: Java/Go/Python/Typescript - Self Employed</h4>
-              <h5>January 2024 - Current</h5>
-              <h6><span style="color: rgb(8, 80, 139);font-weight: 700;">
-                  Developing the following products:
-                </span></h6>
+              <h4>Main Personal Projects - Python/SQL/Typescript</h4>
               <ul>
                 <li>
-                  Web scrapers (DDD architecture) and automation frameworks with Ansible,
-                  Vagrant, Terraform, Kafka.
+                  Data ingestion, orchestration and storage platform:
+                  (https://github.com/CCathlete/pipeline_infra)
+                  based on Apache Hadoop, Spark, Hive and Airflow,
+                  managed with docker containers by Terraform code. Storage is handled by MinIo (S3 data lakehouse),
+                  postgres (data warehouse). The back end and ELT pipelines are written in Python:
+                  (https://github.com/CCathlete/newspipe).
+                  Extraction (streaming + scraping) and analysis are AI based, the data is streamed via a proxy service
+                  (LiteLLM) to model providers through model hubs (Open Router, Github, Google AI Studio).
 
                 </li>
                 <li>
-                  A python encapsulator that creates a binary executable, replacing bytecode
-                  executables (pyinstaller) and obfuscation (pyarmor).
+                  eCommerce data handling app that includes ETL, streaming & caching (Hazelcast jet), persistent storage
+                  (MySQL), API & RBAC security (Spring), monitoring & visualisation (Prometheus, Grafana) and is
+                  deployed on a cloud (Heroku).
 
                 </li>
+              </ul>
+            </div>
+            <div class="resume-item">
+              <h4>Data Engineer, Puella</h4>
+              <h5>March 2025 – December 2025</h5>
+              <ul>
                 <li>
-                  A lightweight thread mechanism for python that works around the GIL (global
-                  interpreter lock) mechanism.
-
+                  Designed and optimised data storage infrastructure that was the base for multiple analyses and
+                  dashboards for all teams in the company (finance, marketing, product, warehouse).
+                  (Postgres, BigQuery)
                 </li>
                 <li>
-                  A veterinary student copilot based on <a href="https://github.com/CCathlete/pdf_book_processor"
-                    target="_blank" style="text-decoration: none; color: rgb(135, 146, 250);font-weight: 700;">pdf
-                    parsing (Go)</a> + <a href="https://github.com/CCathlete/text_explorer" target="_blank"
-                    style="text-decoration: none; color: rgb(135, 146, 250);font-weight: 700;">Q&A AI
-                    model</a> (hugging face,
-                  Python).
+                  Created ELT + ETL pipelines that ingested and transformed data from various APIs (Meta, Google Ads,
+                  GA4,
+                  Microsoft, Jira, ABRA Flexi and more).
+                  Supporting both streaming real time data, incremental
+                  extraction and time based extraction, answering a vast range of needs.
+                </li>
+                <li>
+                  Created and managed a python library with tools for quick data ingestion (pandas, pyspark, sqlalchemy,
+                  sqlglot, asyncio)
+                  giving data analysts easy tools for the integration of
+                  multiple independent databases (gcloud-postgres, BigQuery, mongoDB).
+                </li>
+                <li>
+                  Created a micro services based environment using docker compose to support automated and real time
+                  reports, ETL
+                  orchestration and data quality monitoring (uptime kuma).
                 </li>
               </ul>
             </div>
@@ -306,22 +323,22 @@ through empathy and teamwork."></span>
               <h5>August 2022 – January 2024</h5>
               <ul>
                 <li>
-                  Built automation frameworks for AI model testing, supporting both Linux and
-                  Windows environments.
+                  Rebuilt our Python automation framework for AI model testing, making it clear, pythonic, scalable,
+                  strongly typed and have low memory signature. The new new framework combined functional programming,
+                  OOP and lazy loading and had reduced operation time and (way) higher maintainability.
                 </li>
                 <li>
-                  Ensured the industry’s best testing practices (regression, acceptance, load,
-                  functional), in Python code and Bash scripts improving test coverage by 30% and
-                  providing metrics analysis tools.
+                  Optimised regression testing coverage by adding support for the test datasets to be loaded from
+                  external locations,
+                  allowing for modularity and ease of use for the app developers.
                 </li>
                 <li>
-                  Built, owned and maintained CI/CD pipelines using Jenkins and Docker, reducing
-                  deployment time by 20%.
+                  Was the owner of the entire final compilation, build and packaging process including the final release
+                  and black box sanity check on different platforms.
                 </li>
                 <li>
-                  Participated in a company wide infrastructure investigation on a malfunction that halted the
-                  development
-                  process.
+                  Participated in a company wide infrastructure investigation
+                  on a malfunction that halted the development process.
                 </li>
               </ul>
             </div>
