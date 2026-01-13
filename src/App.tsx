@@ -5,10 +5,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons'
 
-import Carousel from './Carousel'
-import RedirectLink from './RedirectLink'
-import CopyToClipboard from './CopyToClipboard'
-import Card from './Card'
+import Carousel from './carousel'
+import RedirectLink from './redirect'
+import CopyToClipboard from './copy_to_clipboard'
+import Card from './card'
 
 import Papa from 'papaparse'
 
