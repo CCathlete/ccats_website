@@ -9,7 +9,7 @@ const Card: React.FC<{ data: CardData }> = ({ data }) => {
   return (
     <div
       style={{
-        height: '100vh',
+        height: '100%',
         display: 'flex',
         flexDirection: 'row',
       }}
