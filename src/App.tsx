@@ -10,7 +10,7 @@ import RedirectLink from './redirect'
 import CopyToClipboard from './copy_to_clipboard'
 import Card from './card'
 
-import Papa from 'papaparse'
+import Papa, { type ParseConfig,  type ParseResult } from 'papaparse'
 
 // env
 const LINKS_CSV = import.meta.env.VITE_LINKS_CSV
@@ -25,22 +25,25 @@ const App: React.FC = () => {
   useEffect(() => {
     const fetchCards = async () => {
       try {
-        const res = await fetch(LINKS_CSV)
-        const csvText = await res.text()
 
-        Papa.parse(csvText, {
+        const response: Response = await fetch(LINKS_CSV)
+        const csvString: string = await response.text()
+        const config: ParseConfig = {
           header: false,
           skipEmptyLines: true,
-          complete: (result) => {
-            const parsedCards = (result.data as any[][]).map((row, i) => (
-              <Card key={i} data={{ links: row.map(cell => String(cell).trim()) }} />
-            ))
-            setCards(parsedCards)
+          complete: (result: ParseResult<string[]>) => {
+            const parsedCards = result.data.map((row, i) => (
+              <Card key={i} data={{ links: row.map(cell => cell.trim()) }} />
+            ));
+            setCards(parsedCards);
           },
-          error: (err) => {
-            console.error('CSV parse error:', err)
-          },
-        })
+          // error: (err: ParseError) => {
+          //   console.error("CSV parse error:", err);
+          // },
+        };
+
+        Papa.parse<string[]>(csvString, config);
+
       } catch (err) {
         console.error('Fetch error:', err)
       }
