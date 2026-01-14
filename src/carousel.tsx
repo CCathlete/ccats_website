@@ -1,56 +1,35 @@
 // src/carousel.tsx
 
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react'
 
 interface CarouselProps {
-  cards: React.ReactNode[];
+  children: React.ReactNode[]
 }
 
-const Carousel: React.FC<CarouselProps> = ({ cards }) => {
-  const [index, setIndex] = useState(0);
+const Carousel: React.FC<CarouselProps> = ({ children }) => {
+  const [currentIndex, setCurrentIndex] = useState<number>(0)
 
-  useEffect(() => {
-    const onWheel = (e: WheelEvent) => {
-      if (e.deltaY > 0) {
-        setIndex(i => Math.min(i + 1, cards.length - 1));
-      } else {
-        setIndex(i => Math.max(i - 1, 0));
-      }
-    };
+  const next = (): void => {
+    setCurrentIndex((prev: number): number => 
+      (prev + 1) % children.length
+    )
+  }
 
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
-        setIndex(i => Math.min(i + 1, cards.length - 1));
-      }
-      if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
-        setIndex(i => Math.max(i - 1, 0));
-      }
-    };
-
-    window.addEventListener('wheel', onWheel);
-    window.addEventListener('keydown', onKey);
-
-    return () => {
-      window.removeEventListener('wheel', onWheel);
-      window.removeEventListener('keydown', onKey);
-    };
-  }, [cards.length]);
+  const prev = (): void => {
+    setCurrentIndex((prev: number): number => 
+      (prev - 1 + children.length) % children.length
+    )
+  }
 
   return (
-    <div
-      style={{
-        height: '100%',
-        transform: `translateY(-${index * 100}vh)`,
-        transition: 'transform 0.4s ease',
-      }}
-    >
-      {cards.map((card, i) => (
-        <div key={i} style={{ height: '100vh' }}>
-          {card}
-        </div>
-      ))}
+    <div className="carousel">
+      <button onClick={prev} className="nav-btn">Prev</button>
+      <div className="carousel-content">
+        {children[currentIndex]}
+      </div>
+      <button onClick={next} className="nav-btn">Next</button>
     </div>
-  );
-};
+  )
+}
 
-export default Carousel;
+export default Carousel
